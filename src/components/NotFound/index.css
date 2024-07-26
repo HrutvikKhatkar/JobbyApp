@@ -1,0 +1,20 @@
+.notfound-img {
+  width: 50%;
+}
+.notFound-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000000;
+}
+.heading {
+  font-size: 30px;
+  color: #ffffff;
+  font-family: 'Roboto';
+}
+.para {
+  font-size: 15px;
+  color: rgb(189, 189, 189);
+}

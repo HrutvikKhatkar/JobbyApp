@@ -1,0 +1,10 @@
+.list-item-similar-jobs {
+  list-style-type: none;
+  width: 30%;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: #272727;
+  border-radius: 10px;
+  color: white;
+  padding: 20px;
+}
