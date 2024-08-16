@@ -1,9 +1,9 @@
 import {BsSearch} from 'react-icons/bs'
 import {Component} from 'react'
 import Cookies from 'js-cookie'
+import Loader from 'react-loader-spinner'
 import Header from '../Header'
 import AllJobs from '../AllJobs'
-import Loader from 'react-loader-spinner'
 import './index.css'
 
 const employmentTypesList = [
@@ -44,8 +44,10 @@ const Profile = ({userDetails}) => (
       alt="profile"
       className="profile-img"
     />
-    <h1 className="profile-heading">{userDetails.name}</h1>
-    <p className="profile-description">{userDetails.shortBio}</p>
+    {/* <h1 className="profile-heading">{userDetails.name}</h1>
+    <p className="profile-description">{userDetails.shortBio}</p> */}
+    <h1 className="profile-heading">Hrutvik Khatkar</h1>
+    <p className="profile-description">Web Developer</p>
   </div>
 )
 
@@ -130,8 +132,12 @@ class Jobs extends Component {
       apiStatus: apiStatusConstants.inProgress,
     })
 
-    const {searchInput, selectedEmploymentTypes, selectedSalaryRanges} =
-      this.state
+    const {
+      searchInput,
+      selectedEmploymentTypes,
+      selectedSalaryRanges,
+    } = this.state
+
     const jwtToken = Cookies.get('jwt_token')
 
     const employmentTypes = selectedEmploymentTypes.join(',')
@@ -179,7 +185,8 @@ class Jobs extends Component {
 
   onToggleEmploymentType = event => {
     const {selectedEmploymentTypes} = this.state
-    const value = event.target.value
+    const {value} = event.target
+    // const value = value
     if (selectedEmploymentTypes.includes(value)) {
       this.setState(
         {
@@ -201,7 +208,8 @@ class Jobs extends Component {
 
   onToggleSalaryRange = event => {
     const {selectedSalaryRanges} = this.state
-    const value = event.target.value
+    const {value} = event.target
+    // const value = event.target.value
     if (selectedSalaryRanges.includes(value)) {
       this.setState(
         {
@@ -342,8 +350,20 @@ class Jobs extends Component {
                 value={searchInput}
                 onChange={this.onChangeSearchInput}
               />
+              {/* <button
+                type="button"
+                data-testid="searchButton"
+                className="search-button"
+                onClick={this.onSearch}
+              >
+                <BsSearch className="search-icon" />
+              </button> */}
+              {/* <button  aria-label="Search" onClick={this.onSearch}>
+                <BsSearch className="search-icon" />
+              </button> */}
               <button
                 type="button"
+                aria-label="Search"
                 data-testid="searchButton"
                 className="search-button"
                 onClick={this.onSearch}

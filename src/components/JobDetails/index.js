@@ -1,9 +1,6 @@
 import Loader from 'react-loader-spinner'
 import {Component} from 'react'
 import {withRouter} from 'react-router-dom'
-import {FaStar} from 'react-icons/fa'
-import {IoLocationSharp} from 'react-icons/io5'
-import {BsFillBriefcaseFill, BsBoxArrowUpRight} from 'react-icons/bs'
 import Cookies from 'js-cookie'
 import JobDetailsCard from '../JobDetailsCard'
 import Header from '../Header'
@@ -34,7 +31,7 @@ class JobDetails extends Component {
     }
 
     const response = await fetch(apiUrl, options)
-    if (!response.ok) {
+    if (response.ok) {
       const data = await response.json()
       const updatedJobDetails = {
         companyLogoUrl: data.job_details.company_logo_url,
@@ -120,11 +117,12 @@ class JobDetails extends Component {
   }
 
   render() {
-    return <div className="job-details-page">
-      <Header/>
-      {this.renderJobDetailsView()}
-    </div>
+    return (
+      <div className="job-details-page">
+        <Header />
+        {this.renderJobDetailsView()}
+      </div>
+    )
   }
 }
-
 export default withRouter(JobDetails)

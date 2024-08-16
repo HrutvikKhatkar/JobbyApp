@@ -1,12 +1,8 @@
-import Loader from 'react-loader-spinner'
-import {Component} from 'react'
-import {withRouter} from 'react-router-dom'
 import {FaStar} from 'react-icons/fa'
 import {IoLocationSharp} from 'react-icons/io5'
-import SimilarJobs from '../SimilarJobs'
 import {BsFillBriefcaseFill, BsBoxArrowUpRight} from 'react-icons/bs'
-import Cookies from 'js-cookie'
 import {ImNewTab} from 'react-icons/im'
+import SimilarJobs from '../SimilarJobs'
 
 import './index.css'
 
@@ -14,7 +10,7 @@ const JobDetailsCard = props => {
   const {jobDetails, similarJobs} = props
   console.log(similarJobs)
   const {
-    id,
+    // id,
     companyLogoUrl,
     companyWebsiteUrl,
     jobDescription,
@@ -60,7 +56,12 @@ const JobDetailsCard = props => {
         <hr className="hor-line" />
         <div className="description-header">
           <h2 className="description-heading">Description</h2>
-          <a href={companyWebsiteUrl} target="_blank" className="visit">
+          <a
+            href={companyWebsiteUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="visit"
+          >
             Visit
             <span>
               <ImNewTab />

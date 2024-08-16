@@ -1,5 +1,6 @@
 import JobCard from '../JobCard'
 import './index.css'
+
 const AllJobs = props => {
   const {jobsData, searchInputValue} = props
 
