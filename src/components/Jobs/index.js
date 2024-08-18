@@ -51,29 +51,29 @@ const Profile = ({userDetails}) => (
   </div>
 )
 
-const Filter = ({list, selectedValues, onToggle}) => (
-  <ul className="ul-employment-types">
-    {list.map(each => (
-      <li
-        className="list-item"
-        key={each.employmentTypeId || each.salaryRangeId}
-      >
-        <label className="employment-type">
-          <input
-            type="checkbox"
-            value={each.employmentTypeId || each.salaryRangeId}
-            onChange={onToggle}
-            className="input-checkbox"
-            checked={selectedValues.includes(
-              each.employmentTypeId || each.salaryRangeId,
-            )}
-          />
-          {each.label}
-        </label>
-      </li>
-    ))}
-  </ul>
-)
+// const Filter = ({list, selectedValues, onToggle}) => (
+//   <ul className="ul-employment-types">
+//     {list.map(each => (
+//       <li
+//         className="list-item"
+//         key={each.employmentTypeId || each.salaryRangeId}
+//       >
+//         <label className="employment-type">
+//           <input
+//             type="checkbox"
+//             value={each.employmentTypeId || each.salaryRangeId}
+//             onChange={onToggle}
+//             className="input-checkbox"
+//             checked={selectedValues.includes(
+//               each.employmentTypeId || each.salaryRangeId,
+//             )}
+//           />
+//           {each.label}
+//         </label>
+//       </li>
+//     ))}
+//   </ul>
+// )
 
 class Jobs extends Component {
   state = {
@@ -293,7 +293,7 @@ class Jobs extends Component {
       selectedSalaryRanges,
       userDetails,
     } = this.state
-    const {name, profileImageUrl, shortBio} = userDetails
+    // const {name, profileImageUrl, shortBio} = userDetails
     return (
       <>
         <Header />

@@ -25,7 +25,7 @@ const Header = props => {
           <li className="list-item">Jobs</li>
         </Link>
       </ul>
-      <button className="logout-button" onClick={onClickLogout}>
+      <button type="button" className="logout-button" onClick={onClickLogout}>
         Logout
       </button>
     </nav>

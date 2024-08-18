@@ -1,6 +1,6 @@
 import {FaStar} from 'react-icons/fa'
 import {IoLocationSharp} from 'react-icons/io5'
-import {BsFillBriefcaseFill, BsBoxArrowUpRight} from 'react-icons/bs'
+import {BsFillBriefcaseFill} from 'react-icons/bs'
 import {ImNewTab} from 'react-icons/im'
 import SimilarJobs from '../SimilarJobs'
 
@@ -83,7 +83,7 @@ const JobDetailsCard = props => {
             <h1>Life at Company</h1>
             <div className="life-at-company">
               <p>{lifeAtCompany.description}</p>
-              <img src={lifeAtCompany.image_url} />
+              <img src={lifeAtCompany.image_url} alt="life_at_company" />
             </div>
           </div>
         </div>

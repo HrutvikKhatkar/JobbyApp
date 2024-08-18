@@ -6,7 +6,7 @@ import './index.css'
 const SimilarJobs = props => {
   const {eachJob} = props
   const {
-    id,
+    // id,
     companyLogoUrl,
     jobDescription,
     title,
